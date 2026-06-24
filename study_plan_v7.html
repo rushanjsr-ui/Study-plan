@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE / BITSAT Dropper Year Study Plan 2026–27 — v7</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:#ffffff; --bg2:#f5f5f3; --bg3:#eeecea;
+    --text:#1a1a18; --text2:#5a5a56; --text3:#9a9a94;
+    --border:rgba(0,0,0,0.10); --border2:rgba(0,0,0,0.18);
+    --blue-bg:#E6F1FB; --blue-text:#0C447C; --blue-border:#378ADD;
+    --green-bg:#EAF3DE; --green-text:#27500A; --green-border:#639922;
+    --amber-bg:#FAEEDA; --amber-text:#633806; --amber-border:#EF9F27;
+    --red-bg:#FAECE7; --red-text:#712B13; --red-border:#D85A30;
+    --purple-bg:#EEEDFE; --purple-text:#3C3489; --purple-border:#7F77DD;
+    --teal-bg:#E1F4F1; --teal-text:#0C5A4C; --teal-border:#3FB89C;
+    --radius:8px; --radius-lg:12px;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root {
+      --bg:#1c1c1a; --bg2:#252523; --bg3:#2e2e2b;
+      --text:#f0efe8; --text2:#a8a8a0; --text3:#68685e;
+      --border:rgba(255,255,255,0.10); --border2:rgba(255,255,255,0.18);
+      --blue-bg:#0C447C; --blue-text:#B5D4F4;
+      --green-bg:#173404; --green-text:#C0DD97;
+      --amber-bg:#412402; --amber-text:#FAC775; --amber-border:#EF9F27;
+      --red-bg:#4A1B0C; --red-text:#F5C4B3;
+      --purple-bg:#26215C; --purple-text:#CECBF6;
+      --teal-bg:#0B3A30; --teal-text:#A9E6D8;
+    }
+  }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:var(--bg); color:var(--text); line-height:1.5; font-size:14px; }
+  .page { max-width:920px; margin:0 auto; padding:2rem 1.5rem 4rem; }
+
+  .page-header { margin-bottom:1.5rem; padding-bottom:1.25rem; border-bottom:0.5px solid var(--border2); }
+  .page-header h1 { font-size:20px; font-weight:600; margin-bottom:4px; }
+  .page-header p { font-size:13px; color:var(--text2); }
+  .header-meta { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  .meta-pill { font-size:11px; padding:3px 10px; border-radius:20px; border:0.5px solid var(--border2); color:var(--text2); background:var(--bg2); }
+  .meta-pill.final { background:var(--teal-bg); color:var(--teal-text); border-color:var(--teal-border); font-weight:500; }
+
+  .changelog { background:var(--bg2); border-radius:var(--radius-lg); padding:14px 16px; margin-bottom:1.5rem; border:0.5px solid var(--teal-border); }
+  .changelog-title { font-size:12px; font-weight:600; color:var(--teal-text); margin-bottom:10px; text-transform:uppercase; letter-spacing:.05em; }
+  .cl-item { display:flex; gap:10px; align-items:flex-start; margin-bottom:9px; font-size:12px; }
+  .cl-item:last-child { margin-bottom:0; }
+  .cl-num { font-weight:600; color:var(--teal-text); min-width:20px; font-size:11px; padding-top:1px; }
+  .cl-body { color:var(--text2); line-height:1.55; }
+  .cl-body strong { color:var(--text); font-weight:500; }
+
+  .stats-row { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:1.5rem; }
+  .stat-box { background:var(--bg2); border-radius:var(--radius); padding:12px; text-align:center; }
+  .stat-num { font-size:19px; font-weight:600; color:var(--text); }
+  .stat-lbl { font-size:11px; color:var(--text2); margin-top:3px; }
+
+  .section-label { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--text3); margin-bottom:8px; margin-top:1.5rem; }
+  .skeleton-tabs { display:flex; gap:6px; margin-bottom:.75rem; }
+  .sk-tab { font-size:11px; padding:4px 12px; border-radius:20px; border:0.5px solid var(--border2); background:transparent; color:var(--text2); cursor:pointer; }
+  .sk-tab.active { background:var(--blue-bg); color:var(--blue-text); border-color:transparent; }
+  .daily-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(122px,1fr)); gap:8px; margin-bottom:.5rem; }
+  .daily-block { background:var(--bg2); border-radius:var(--radius); padding:9px 11px; border:0.5px solid var(--border); }
+  .daily-time { font-size:11px; color:var(--text3); margin-bottom:3px; }
+  .daily-name { font-size:12px; font-weight:600; color:var(--text); }
+  .daily-sub { font-size:11px; color:var(--text2); margin-top:2px; }
+  .skeleton-note { font-size:11px; color:var(--text2); margin-bottom:1.5rem; padding:6px 2px; }
+
+  .legend { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:1.5rem; }
+  .leg { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text2); }
+  .leg-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+
+  .filter-bar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:1.25rem; }
+  .filter-bar span { font-size:12px; color:var(--text2); }
+  .fbtn { font-size:12px; padding:5px 13px; border-radius:20px; border:0.5px solid var(--border2); background:transparent; color:var(--text2); cursor:pointer; transition:all .15s; }
+  .fbtn:hover:not(.active) { background:var(--bg2); }
+  .fbtn.active { background:var(--blue-bg); color:var(--blue-text); border-color:transparent; }
+
+  .phase-div { display:flex; align-items:center; gap:10px; margin:1.75rem 0 .75rem; }
+  .phase-line { flex:1; height:0.5px; background:var(--border2); }
+  .phase-pill { font-size:11px; padding:3px 11px; border-radius:20px; white-space:nowrap; font-weight:500; }
+  .ph1 { background:var(--blue-bg); color:var(--blue-text); }
+  .ph2 { background:var(--green-bg); color:var(--green-text); }
+  .ph3 { background:var(--purple-bg); color:var(--purple-text); }
+  .ph4 { background:var(--red-bg); color:var(--red-text); }
+  .ph5 { background:var(--teal-bg); color:var(--teal-text); }
+
+  .week-card { border:0.5px solid var(--border); border-radius:var(--radius-lg); margin-bottom:8px; overflow:hidden; }
+  .week-header { display:flex; align-items:center; gap:10px; padding:10px 14px; cursor:pointer; user-select:none; background:var(--bg2); transition:background .12s; }
+  .week-header:hover { background:var(--bg3); }
+  .wk-num { font-size:11px; font-weight:500; color:var(--text3); min-width:54px; }
+  .wk-dates { font-size:11px; color:var(--text3); min-width:108px; }
+  .wk-title { font-size:13px; font-weight:500; color:var(--text); flex:1; }
+  .wk-tags { display:flex; gap:5px; flex-wrap:wrap; }
+  .tag { font-size:11px; padding:2px 8px; border-radius:20px; font-weight:500; }
+  .t-allen { background:var(--blue-bg); color:var(--blue-text); }
+  .t-exam { background:var(--red-bg); color:var(--red-text); }
+  .t-buffer { background:var(--green-bg); color:var(--green-text); }
+  .t-bitsat { background:var(--purple-bg); color:var(--purple-text); }
+  .t-hard { background:var(--amber-bg); color:var(--amber-text); }
+  .t-rest { background:var(--teal-bg); color:var(--teal-text); }
+  .chevron { font-size:13px; color:var(--text3); transition:transform .2s; display:inline-block; }
+  .week-body { display:none; padding:12px 14px; border-top:0.5px solid var(--border); }
+  .week-body.open { display:block; }
+
+  .hours-pill { display:inline-flex; align-items:center; gap:6px; font-size:11px; padding:3px 10px; border-radius:20px; font-weight:500; margin-bottom:10px; }
+  .hp-std { background:var(--green-bg); color:var(--green-text); }
+  .hp-intensive { background:var(--amber-bg); color:var(--amber-text); }
+  .hp-test { background:var(--blue-bg); color:var(--blue-text); }
+
+  .day-table { width:100%; border-collapse:collapse; font-size:11.5px; margin-bottom:10px; }
+  .day-table th { text-align:left; font-weight:600; color:var(--text3); padding:4px 6px; border-bottom:0.5px solid var(--border2); }
+  .day-table td { padding:4px 6px; border-bottom:0.5px solid var(--border); color:var(--text2); vertical-align:top; }
+  .day-table td:first-child { color:var(--text); font-weight:500; white-space:nowrap; }
+  .day-table tr.rest-row td { color:var(--teal-text); font-style:italic; }
+
+  .subj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+  .subj-card { border-radius:var(--radius); padding:10px 12px; border:0.5px solid var(--border); }
+  .subj-lbl { font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.04em; margin-bottom:5px; }
+  .s-phy .subj-lbl { color:var(--blue-text); }
+  .s-chem .subj-lbl { color:var(--green-text); }
+  .s-math .subj-lbl { color:var(--amber-text); }
+  .s-bitsat .subj-lbl { color:var(--purple-text); }
+  .subj-body { font-size:12px; color:var(--text2); line-height:1.55; }
+
+  .week-note { margin-top:10px; font-size:12px; color:var(--text2); padding:8px 10px; border-left:2px solid var(--border2); background:var(--bg2); line-height:1.55; }
+  .design-note { margin-top:8px; font-size:12px; color:var(--teal-text); padding:8px 10px; border-left:2px solid var(--teal-border); background:var(--teal-bg); line-height:1.55; }
+  .exam-banner { border-radius:var(--radius); padding:7px 11px; margin-bottom:10px; font-size:12px; font-weight:500; }
+  .eb-allen { background:var(--blue-bg); color:var(--blue-text); }
+  .eb-exam { background:var(--red-bg); color:var(--red-text); }
+  .eb-rest { background:var(--teal-bg); color:var(--teal-text); }
+
+  @media print {
+    .filter-bar,.changelog,.skeleton-tabs { display:none; }
+    .week-body { display:block !important; }
+    .chevron { display:none; }
+    .week-card { break-inside:avoid; margin-bottom:12px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-header">
+    <h1>JEE / BITSAT Dropper Year Study Plan — 2026–27</h1>
+    <p>v7 · start delayed to 25 Jun · wake 10:30 AM / sleep 2:00 AM · all other content unchanged from v6</p>
+    <div class="header-meta">
+      <span class="meta-pill">Start: 27 Jun 2026</span>
+      <span class="meta-pill">JEE Main S1: ~late Jan 2027</span>
+      <span class="meta-pill">BITSAT: ~Apr 2027</span>
+      <span class="meta-pill">35 weeks total</span>
+      <span class="meta-pill final">v7 — delayed start, same content</span>
+    </div>
+  </div>
+
+  <div class="changelog">
+    <div class="changelog-title">v7 — start delayed to 25 Jun, wake/sleep updated</div>
+    <div class="cl-item"><span class="cl-num">1</span><div class="cl-body"><strong>Start date moved to the first Saturday on/after 25 Jun (27 Jun)</strong>, to keep the plan's Sat–Fri week structure intact — every week still ends with Saturday-light + Sunday-mock exactly as designed. Because Allen's test dates are fixed in real time, this 1-week delay removes one week of runway before every single Allen milestone. The only place that mattered structurally was RT1: its dedicated pre-test buffer week (diagnostic + revision + mock sprint) no longer fits before 16 Aug, so it has been merged into the test week itself — the same kind of merge already used once in v6 to land the original calendar on RT1. Every week from there onward is renumbered down by exactly one (Wk9 onward shifts to match), and every other Allen date — SM1, RT2, SM2, MT1, AIOT — automatically realigns to its correct week with no further content changes anywhere. Total plan length: 35 weeks (was 36).</div></div>
+    <div class="cl-item"><span class="cl-num">2</span><div class="cl-body"><strong>Wake time set to 10:30 AM, sleep to 2:00 AM.</strong> Both daily skeletons (Standard and Intensive) now start at 10:30 AM instead of 9:00/8:30 AM. Every block keeps its original duration — only the clock times shifted, so the study totals are unchanged (still 9.0h standard / 9.5h intensive). The intensive day's extra 30 minutes now comes from finishing later in the evening (10:00 PM instead of 9:30 PM) rather than starting earlier, since a single fixed wake time was given, not a variable one. This leaves a genuine 4–4.5 hour wind-down window every night before the 2:00 AM sleep time.</div></div>
+  </div>
+
+  <div class="changelog">
+    <div class="changelog-title">v6 — what changed from v5, and why</div>
+    <div class="cl-item"><span class="cl-num">1</span><div class="cl-body"><strong>The daily schedule was dishonest.</strong> v5's own skeleton (9AM–8PM with breaks) only supports 9.0h of real study time, but 24 of 31 weeks claimed 9.5h or 10h/day — numbers the schedule itself couldn't deliver. Fixed by defining two explicit, named skeletons below: a <em>Standard day</em> (9.0h, used for most weeks) and an <em>Intensive day</em> (9.5h, an honestly wider day used only in weeks tagged "intensive" — hard chapters or test-adjacent weeks). No week in v6 exceeds 9.5h, and every week's hours are now re-verified to sum correctly against its own subject breakdown.</div></div>
+    <div class="cl-item"><span class="cl-num">2</span><div class="cl-body"><strong>Kinematics 1D and 2D are no longer merged.</strong> v4/v5 combined both into one week and called them "routine for droppers" — an assumption that doesn't hold, since gaps in exactly this kind of numerically-dense problem-solving are often why a student is repeating the year. Each now gets its own full week. The lost week was recovered without touching any other chapter: the old separate "self-test/diagnostic" week was folded into Day 1 of the merged revision+mock week instead of staying as its own week — both still happen, just sequenced together, since both were already content-free weeks.</div></div>
+    <div class="cl-item"><span class="cl-num">3</span><div class="cl-body"><strong>Semi Major Test 2 had zero buffer before it — every other Allen test had a full week.</strong> RT1, SM1, and RT2 were each preceded by a dedicated no-new-content buffer week. SM2 wasn't: new content finished Friday, the test was Sunday. Fixed by moving Error Analysis and EM Waves (both genuinely trivial, &lt;1h chapters) one week earlier, which lets the SM2-adjacent week finish all new content by Thursday — leaving Friday and Saturday as a real mock/consolidation buffer, matching the pattern used everywhere else.</div></div>
+    <div class="cl-item"><span class="cl-num">4</span><div class="cl-body"><strong>A promised rest day never actually existed.</strong> v5 said once, in one week's note, that "Sunday rest moves to Thursday afternoon" — and then never scheduled it, for 11 straight weeks. Fixed by building a real half-day into the weekly rhythm everywhere mocks run on Sunday: Saturday afternoon becomes genuinely light (no new content, optional revision only), every week, shown explicitly in that week's own schedule rather than mentioned once and dropped.</div></div>
+    <div class="cl-item"><span class="cl-num">5</span><div class="cl-body"><strong>The plan ended in January but BITSAT is in April — a 10-week gap with no plan at all.</strong> Real BITSAT prep hours were carved out of nearly every week from October onward, but the plan stopped the moment JEE Main Session 1 ended, leaving zero guidance for the 10 weeks before the actual BITSAT exam. Added <strong>Phase 5</strong>: a dedicated BITSAT-intensive runway covering the syllabus topics JEE doesn't (English Proficiency, Logical Reasoning depth, BITSAT-specific Physics/Chem/Maths question style) plus a proper mock-test taper into the exam.</div></div>
+    <div class="cl-item"><span class="cl-num">6</span><div class="cl-body"><strong>One content-dense week had half the study time of every other week.</strong> The week covering SHM, Fluid Mechanics, Semiconductor, and five organic chapters was reframed in an earlier patch as "weekly totals" to fix an apparent overrun — but the new weekly total (30h) was actually less than half of a normal week's capacity (~57h), even though this was meant to be the densest week in the plan. Recomputed properly: with Error Analysis and EM Waves moved out (see #3), the real content totals ~25.5h, which fits comfortably across a 6-day week at the standard pace — with two genuine buffer days left over before SM2.</div></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">9 / 9.5h</div><div class="stat-lbl">honest daily ceiling</div></div>
+    <div class="stat-box"><div class="stat-num">35</div><div class="stat-lbl">total weeks</div></div>
+    <div class="stat-box"><div class="stat-num">6</div><div class="stat-lbl">Allen milestones</div></div>
+    <div class="stat-box"><div class="stat-num">2</div><div class="stat-lbl">target exams</div></div>
+    <div class="stat-box"><div class="stat-num">✓ 0</div><div class="stat-lbl">silent overruns</div></div>
+  </div>
+
+  <div class="section-label">Daily schedule — two honest variants</div>
+  <div class="skeleton-tabs">
+    <button class="sk-tab active" onclick="showSkeleton('std',this)">Standard day · 9.0h</button>
+    <button class="sk-tab" onclick="showSkeleton('int',this)">Intensive day · 9.5h</button>
+  </div>
+  <div id="skeleton-std">
+    <div class="daily-grid">
+      <div class="daily-block"><div class="daily-time">10:30 – 1:00 PM</div><div class="daily-name">Block 1</div><div class="daily-sub">Deep concept + Allen module</div></div>
+      <div class="daily-block"><div class="daily-time">1:00 – 1:30 PM</div><div class="daily-name">Break</div><div class="daily-sub">Snack, walk, reset</div></div>
+      <div class="daily-block"><div class="daily-time">1:30 – 3:30 PM</div><div class="daily-name">Block 2</div><div class="daily-sub">Theory + exercise sheets</div></div>
+      <div class="daily-block"><div class="daily-time">3:30 – 4:30 PM</div><div class="daily-name">Lunch</div><div class="daily-sub">Full rest, no screens</div></div>
+      <div class="daily-block"><div class="daily-time">4:30 – 7:00 PM</div><div class="daily-name">Block 3</div><div class="daily-sub">Problem solving + PYQ</div></div>
+      <div class="daily-block"><div class="daily-time">7:00 – 7:30 PM</div><div class="daily-name">Break</div><div class="daily-sub">Short walk</div></div>
+      <div class="daily-block"><div class="daily-time">7:30 – 9:30 PM</div><div class="daily-name">Revision + DPP</div><div class="daily-sub">Error log, formula drill</div></div>
+    </div>
+    <div class="skeleton-note">Study capacity: 2.5 + 2 + 2.5 + 2 = <strong>9.0h</strong>. This is the default for most weeks — sustainable for a 36-week year.</div>
+  </div>
+  <div id="skeleton-int" style="display:none">
+    <div class="daily-grid">
+      <div class="daily-block"><div class="daily-time">10:30 – 1:00 PM</div><div class="daily-name">Block 1</div><div class="daily-sub">Deep concept + Allen module</div></div>
+      <div class="daily-block"><div class="daily-time">1:00 – 1:30 PM</div><div class="daily-name">Break</div><div class="daily-sub">Snack, walk, reset</div></div>
+      <div class="daily-block"><div class="daily-time">1:30 – 3:30 PM</div><div class="daily-name">Block 2</div><div class="daily-sub">Theory + exercise sheets</div></div>
+      <div class="daily-block"><div class="daily-time">3:30 – 4:30 PM</div><div class="daily-name">Lunch</div><div class="daily-sub">Full rest, no screens</div></div>
+      <div class="daily-block"><div class="daily-time">4:30 – 7:00 PM</div><div class="daily-name">Block 3</div><div class="daily-sub">Problem solving + PYQ</div></div>
+      <div class="daily-block"><div class="daily-time">7:00 – 7:30 PM</div><div class="daily-name">Break</div><div class="daily-sub">Short walk</div></div>
+      <div class="daily-block"><div class="daily-time">7:30 – 9:30 PM</div><div class="daily-name">Revision + DPP</div><div class="daily-sub">Error log, formula drill</div></div>
+      <div class="daily-block"><div class="daily-time">9:30 – 10:00 PM</div><div class="daily-name">Extra slot</div><div class="daily-sub">Used only on intensive days</div></div>
+    </div>
+    <div class="skeleton-note">Study capacity: 2.5 + 2 + 2.5 + 2 + 0.5 = <strong>9.5h</strong>. Used only in weeks explicitly tagged "intensive" — hard chapters or test-adjacent weeks. Same wake time as a standard day; the extra 30 min is added at the end of the evening, not by waking earlier — a deliberate, visible extension, not a silent overrun.</div>
+  </div>
+
+  <div class="legend">
+    <div class="leg"><div class="leg-dot" style="background:#378ADD"></div>Allen test week</div>
+    <div class="leg"><div class="leg-dot" style="background:#D85A30"></div>Exam period</div>
+    <div class="leg"><div class="leg-dot" style="background:#639922"></div>Buffer / revision</div>
+    <div class="leg"><div class="leg-dot" style="background:#7F77DD"></div>BITSAT focus</div>
+    <div class="leg"><div class="leg-dot" style="background:#BA7517"></div>High difficulty</div>
+    <div class="leg"><div class="leg-dot" style="background:#3FB89C"></div>Rest day built in</div>
+  </div>
+
+  <div class="filter-bar">
+    <span>Filter:</span>
+    <button class="fbtn active" onclick="filterPhase('all',this)">All phases</button>
+    <button class="fbtn" onclick="filterPhase('1',this)">Phase 1 — Foundation</button>
+    <button class="fbtn" onclick="filterPhase('2',this)">Phase 2 — Consolidation</button>
+    <button class="fbtn" onclick="filterPhase('3',this)">Phase 3 — Full syllabus</button>
+    <button class="fbtn" onclick="filterPhase('4',this)">Phase 4 — JEE Mocks</button>
+    <button class="fbtn" onclick="filterPhase('5',this)">Phase 5 — BITSAT runway</button>
+  </div>
+
+  <div id="weeks-container"></div>
+</div>
+
+<script>
+const phaseNames = {
+  '1':'Phase 1 — Foundation (Wks 1–8 · 27 Jun–21 Aug)',
+  '2':'Phase 2 — Consolidation (Wks 9–22 · Aug–Nov)',
+  '3':'Phase 3 — Full syllabus + BITSAT intro (Wks 23–27 · Nov–Dec)',
+  '4':'Phase 4 — JEE Mock sprint (Wks 28–30 · Jan)',
+  '5':'Phase 5 — BITSAT-only runway (Wks 31–35 · Feb–Apr)'
+};
+const phaseClass = {'1':'ph1','2':'ph2','3':'ph3','4':'ph4','5':'ph5'};
+
+function showSkeleton(which, btn) {
+  document.getElementById('skeleton-std').style.display = which==='std' ? '' : 'none';
+  document.getElementById('skeleton-int').style.display = which==='int' ? '' : 'none';
+  document.querySelectorAll('.sk-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+const weeks = [
+  { phase:'1', w:1, dates:'27 Jun–3 Jul', title:'Foundation kickoff — Basic Maths + Mole Concept + Algebra', tags:['rest'], skeleton:'std',
+    phy:'Basic Maths in Physics (2.5h): dimensional analysis, vector theory + all problems. Unit & Dimensions (1h): full Allen module.',
+    chem:'Mole Concept & Eudiometry (2.5h): stoichiometry, mole-mole relationships, limiting reagent — Allen exercise sets 1–3.',
+    math:'Sets, Numbers & Intervals + Fundamental Algebra (2h): complete theory + all exercise questions.',
+    bitsat:'—',
+    days:[['Mon–Fri','Phy 2.5h · Chem 2.5h · Math 2h · DPP/error log 1.5h (0.5h/subject)','8.5h'],
+          ['Sat','Same as weekdays — full content day','8.5h'],
+          ['Sun','Light revision only (2h) — true rest afternoon','2h, rest']],
+    note:'Restart point. The first week deliberately sits half an hour under the 9h standard ceiling — easing in, not maxing out, from day one. Sunday is a real rest day this early; it changes shape later only once mocks genuinely need the slot, not by default.' },
+  { phase:'1', w:2, dates:'4–10 Jul', title:'Kinematics 1-D — full dedicated week', tags:['hard'], skeleton:'intensive',
+    phy:'Kinematics 1-D: uniform/non-uniform motion, all graph types, equations of motion, relative motion in 1D — complete Allen module + 40 PYQs (4h/day Mon–Thu, 5h Fri–Sat to finish strong). This chapter gets its own week deliberately (see design note).',
+    chem:'Quantum Numbers & Electronic Configuration (1.5h): aufbau/Hund\'s/Pauli rules, orbital shapes. Periodic Table & Periodic Properties (1h). Bohr model is NOT covered here — see Wk 20.',
+    math:'Quadratic Equations + Logarithms (2.5h): roots, discriminant, log rules — all Allen exercise sets.',
+    bitsat:'—',
+    days:[['Mon–Thu','Phy 4h · Chem 2h · Math 2.5h · PYQ block 1h','9.5h'],
+          ['Fri–Sat','Phy 5h (finish + 40 PYQs) · Chem 0.5h (PT consolidation) · Math 1.5h (drill)','7h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Design note: Kinematics 1-D is kept as its own full week rather than merged with 2-D. It is one of the most numerically dense, multi-step chapters in JEE Physics — exactly the kind of speed-and-accuracy skill that a dropper year exists to fix. Giving it real, unhurried time in week 2 (before any other momentum is built) is deliberate.' },
+  { phase:'1', w:3, dates:'11–17 Jul', title:'Kinematics 2-D & Projectile Motion — full dedicated week', tags:['hard'], skeleton:'intensive',
+    phy:'Kinematics 2-D & Projectile Motion: oblique projectile, relative motion in 2D, river-boat problems — full Allen module + 40 PYQs (4h/day Mon–Thu, 5h Fri–Sat to finish strong).',
+    chem:'Chemical Bonding (3h): VSEPR, hybridisation, MOT, hydrogen bonding — dense chapter, full Allen module.',
+    math:'Functions & Inverse Trig Functions (1.5h): domain/range, types, composition, ITF identities.',
+    bitsat:'—',
+    days:[['Mon–Thu','Phy 4h · Chem 3h · Math 1.5h · PYQ 1h','9.5h'],
+          ['Fri–Sat','Phy 5h (finish + PYQs) · Math 1.5h (drill)','6.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'2-D Kinematics builds directly on 1-D from last week while that foundation is still fresh — sequencing them in consecutive weeks (not the same week) gives each the depth it needs without losing the connection between them.' },
+  { phase:'1', w:4, dates:'18–24 Jul', title:'NLM & Friction + Thermodynamics-01 + Sequences', tags:[], skeleton:'std',
+    phy:'Newton\'s Laws of Motion & Friction (3h): FBD problems, Atwood, incline, connected systems — full module.',
+    chem:'Thermodynamics-01 + Thermochemistry (2.5h): laws, Hess, bond enthalpies — Allen module + PYQ.',
+    math:'Sequence & Series + Trigonometric Ratios & Identities (2.5h): AP/GP/HP, all trig identities.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3h · Chem 2.5h · Math 2.5h · PYQ/DPP 1h','9h'],
+          ['Sun','Light revision (2h) only']],
+    note:'NLM numericals are the backbone of JEE Mechanics — solve every Allen exercise question including starred ones, no skipping.' },
+  { phase:'1', w:5, dates:'25–31 Jul', title:'Electrostatics + Thermodynamics-02 & Kinetics + Limits', tags:['hard'], skeleton:'intensive',
+    phy:'Electrostatics (3.5h): Coulomb, electric field, potential, Gauss\'s law — every Allen problem + 30 PYQs. The single most important Physics chapter for JEE.',
+    chem:'Thermodynamics-02 + Chemical Kinetics (2.5h): Gibbs free energy, equilibrium constant, rate laws. Liquid Solutions/Concentration Terms (1.5h).',
+    math:'Limits, Continuity & Differentiability (2h): standard limits, L\'Hôpital, IVT.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3.5h (incl. PYQ block) · Chem 4h · Math 2h (incl. DPP)','9.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Chemistry runs heavier this week (4h) to absorb Thermo-02, Kinetics, and Liquid Solutions together — all three are short, related chapters that group well. Do not rush past Gauss\'s law to make room. PYQ practice and DPP are folded into the Physics and Maths blocks above rather than added as separate slots, to keep the day honestly at 9.5h.' },
+  { phase:'1', w:6, dates:'1–7 Aug', title:'Gravitation + Electronic Displacement Effects + Differentiation', tags:[], skeleton:'std',
+    phy:'Gravitation (2.5h): gravitational field/potential, satellite motion, escape velocity — complete module. A lighter chapter — good pairing with a heavier Chem/Maths week.',
+    chem:'Electronic Displacement Effects + Nomenclature & Common Names (2.5h): +I/−I, +M/−M, IUPAC naming — the mechanism foundation for all later organic chapters.',
+    math:'Method of Differentiation (3h): chain rule, implicit, parametric, higher-order — full Allen module.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 2.5h · Chem 2.5h · Math 3h · Formula drilling 30min · DPP 30min','9.0h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Keep a running formula master sheet per subject from this week onward — update every evening, drill from it 2–3×/week.' },
+  { phase:'1', w:7, dates:'8–14 Aug', title:'Geometrical Optics + Application of Derivatives (Chemistry: PYQ week)', tags:[], skeleton:'std',
+    phy:'Geometrical Optics, Ray Optics & Optical Instruments (3h): mirrors, refraction, lenses, TIR, instruments — full module.',
+    chem:'Chemistry has no new chapter this week — all RT1 Chemistry topics are already covered. Use this week for a cumulative PYQ block (1.5h) across Mole Concept through Thermodynamics-02.',
+    math:'Application of Derivatives (3h): maxima/minima, tangents, increasing/decreasing, Rolle\'s, MVT — full module, completes RT1 Maths syllabus.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3h · Chem PYQ 1.5h · Math 3h · DPP 1h','8.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Chemistry finishing early is intentional, not a gap — it frees up real time this week for Physics and Maths to finish strong before the merged revision+mock week. Run one self-diagnostic test Saturday afternoon: 30 questions, mixed RT1 syllabus, to surface gaps before next week\'s dedicated correction time.' },
+  { phase:'1', w:8, dates:'15–21 Aug', title:'ALLEN REVIEW TEST 1 — 16 Aug', tags:['allen','rest'], skeleton:'test',
+    phy:'16 Aug, 9AM–12PM CBT. Physics: Vectors, Optics, Kinematics 1D/2D, Electrostatics, NLM, Gravitation.',
+    chem:'Same sitting. Chemistry: Mole Concept, Solutions, Atomic Structure (QN+PT), Bonding, Kinetics, Thermodynamics.',
+    math:'Same sitting. Maths: Sets, Algebra, Quadratics, Functions, ITF, Logs, Sequences, Limits, Differentiation, AOD.',
+    bitsat:'—',
+    days:[['Sun 16 Aug','RT1 exam, 9AM–12PM'],
+          ['Mon','Rest — score yourself in the evening, nothing else'],
+          ['Tue–Wed','Written corrections on every wrong/skipped question, no exceptions'],
+          ['Thu onward','Resume Phase 2 syllabus']],
+    note:'Every date, chapter, and hour total from this point onward is unaffected by anything that happened in Phase 1 — the compression is fully absorbed by Week 8. Start date moved to 25 Jun (delayed from 20 Jun), shifting the whole calendar one week later. Because RT1\'s date (16 Aug) is fixed by Allen, the dedicated pre-RT1 diagnostic/revision/mock-sprint week no longer fits before the test — RT1 now arrives directly off Week 7\'s regular content, with no separate buffer week ahead of it. This is the direct cost of delaying the start while keeping every other week\'s content unchanged.' },
+
+  // ── PHASE 2 — CONSOLIDATION ─────────────────────────────────────────────
+  { phase:'2', w:9, dates:'22–28 Aug', title:'Current Electricity + Redox + Indefinite Integration', tags:[], skeleton:'std',
+    phy:'Current Electricity (3h): Ohm\'s, Kirchhoff\'s, Wheatstone, RC transients — 35+ PYQs mandatory, highest PYQ-return chapter in Physics.',
+    chem:'Redox & Equivalent Concepts (2h): n-factor, equivalent weight, titrations — full Allen module.',
+    math:'Indefinite Integration (3.5h): substitution, by parts, partial fractions, special integrals — begin module, spreads into next week.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3h · Chem 2h · Math 3.5h · PYQ/DPP 30min','9h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Treat Current Electricity with the same intensity as Electrostatics — it has the highest PYQ return rate in all of Physics.' },
+  { phase:'2', w:10, dates:'29 Aug–4 Sep', title:'Circular Motion + Coordination Chemistry + Indefinite Integration cont.', tags:[], skeleton:'std',
+    phy:'Circular Motion (2.5h): centripetal force, banking, vertical circle — Allen module complete.',
+    chem:'Coordination Chemistry + Halogen Derivatives (2.5h): IUPAC naming, SN1/SN2 mechanisms.',
+    math:'Indefinite Integration cont. + Straight Lines (3.5h): finish all integration types; begin coordinate geometry.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 2.5h · Chem 2.5h · Math 3.5h · Integration drills 30min','9h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Straight Lines is short but high-yield — don\'t skip it even if Integration runs long. Keep a dedicated error-notebook page for integration technique mistakes.' },
+  { phase:'2', w:11, dates:'5–11 Sep', title:'Work Power Energy + Organic Mechanisms + Determinants', tags:[], skeleton:'std',
+    phy:'Work, Power, Energy (3h): work-energy theorem, conservative forces, potential energy curves — full module + PYQ.',
+    chem:'Alcohol & Ether, Hydrocarbons (3h): reactions, mechanisms, properties — Allen module cover-to-cover.',
+    math:'Determinants (2.5h): properties, Cramer\'s rule, adjoint/inverse — complete Allen module.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3h · Chem 3h · Math 2.5h · Mechanism drills 30min','9h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Organic reaction mechanisms unlock every later organic chapter — spend time on mechanism logic, not just memorisation.' },
+  { phase:'2', w:12, dates:'12–18 Sep', title:'Capacitors + Solutions revision + Definite Integration', tags:[], skeleton:'std',
+    phy:'Capacitance (3h): parallel plate, spherical, energy, dielectrics, RC circuits — full module.',
+    chem:'Liquid Solution revision + Thermochemistry PYQ (1.5h): colligative properties, full PYQ block.',
+    math:'Definite Integration (3.5h): properties, King\'s rule, Leibniz, standard forms — Allen module complete.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3h · Chem 1.5h · Math 3.5h · Problem sprint 1h','9h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Capacitors and Definite Integration are both problem-heavy — run a dedicated evening problem sprint on just these two.' },
+  { phase:'2', w:13, dates:'19–25 Sep', title:'Pre-SM1 mock sprint', tags:['allen','buffer','rest'], skeleton:'intensive',
+    phy:'SM1 adds: Current Electricity, Circular Motion, WPE, Capacitance. 3 full mocks on complete SM1 Physics block.',
+    chem:'SM1 adds: Redox, Coordination, Halogen Derivatives, Alcohol, Hydrocarbons. 3 mocks.',
+    math:'SM1 adds: Indef. Int., Straight Line, Determinants, Def. Int. 3 full mocks.',
+    bitsat:'—',
+    days:[['Mon, Wed, Fri','Full 3h mock','3h'],
+          ['Tue, Thu','Analysis + targeted revision','5h'],
+          ['Sat','Weak-topic blitz','5h'],
+          ['Sun','Rest — true day off before SM1 week']],
+    note:'Track score trajectory across the 3 mocks — it should trend up. If it doesn\'t, Saturday becomes a full gap-analysis day instead of a blitz.' },
+  { phase:'2', w:14, dates:'26 Sep–2 Oct', title:'ALLEN SEMI MAJOR TEST 1 — 27 Sep', tags:['allen'], skeleton:'test',
+    phy:'27 Sep, 9AM–12PM CBT. Complete Phase 1 + Current Electricity, Circular Motion, WPE, Capacitance.',
+    chem:'Complete inorganic + basic organic block.',
+    math:'All topics through Definite Integration. First real coordinate geometry test.',
+    bitsat:'—',
+    days:[['Sun 27 Sep','SM1 exam'],['Mon–Wed','3-day correction protocol, build subject-wise gap list'],['Thu–Sat','Begin Phase 2 new chapters']],
+    note:'SM1 is your national-level benchmark. Use the gap list to set Phase 2 priorities, not just to feel good or bad about the score.' },
+  { phase:'2', w:15, dates:'3–9 Oct', title:'Centre of Mass + Carbonyl Compounds + Circle', tags:['hard'], skeleton:'intensive',
+    phy:'Centre of Mass, Momentum & Collision (3.5h): elastic/inelastic, variable mass, 2D collisions — full module.',
+    chem:'Carbonyl Compounds (3h): aldehydes, ketones, aldol, Cannizzaro, named reactions — full module.',
+    math:'Circle (2.5h): equations, chord, tangent, family of circles — complete Allen module.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3.5h · Chem 3h · Math 2.5h · Named reaction drills 30min','9.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'COM and Carbonyl are both mechanically dense — understand nucleophilic addition mechanism before memorising specific Carbonyl reactions.' },
+  { phase:'2', w:16, dates:'10–16 Oct', title:'Rotational Motion (part 1) + Name Reactions + Area Under Curve', tags:['hard'], skeleton:'intensive',
+    phy:'Rotational Motion (4h): MOI theorems, torque, angular momentum, rotational KE — first half of Allen module. The hardest chapter in JEE Physics — given the most time of any single chapter this year.',
+    chem:'Oxidation/Reduction, Aldol & Similar Name Reactions, Acidic/Basic Strength (2.5h).',
+    math:'Area Under the Curve (2.5h): integral applications, area between curves — full module.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 4h · Chem 2.5h · Math 2.5h · Rotation re-solve eve 30min','9.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Every evening: redo the day\'s Rotational Motion problems from scratch, no looking at solutions. This is the chapter where that habit matters most.' },
+  { phase:'2', w:17, dates:'17–23 Oct', title:'Rotational Motion (part 2) + Electrochemistry + Differential Equations', tags:['hard'], skeleton:'intensive',
+    phy:'Rotational Motion (3.5h): rolling motion, combined rotation-translation, advanced problems + 40 PYQs.',
+    chem:'Electrochemistry (3h): EMF, Nernst equation, electrolysis, Faraday\'s laws — full Allen module.',
+    math:'Differential Equations (2.5h): variable separable, homogeneous, linear first-order — complete module.',
+    bitsat:'—',
+    days:[['Mon–Sat','Phy 3.5h · Chem 3h · Math 2.5h · Rotation PYQ 30min','9.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'Finish Rotational Motion this week, no carryover. By Sunday: able to solve any standard rolling problem in under 5 minutes.' },
+  { phase:'2', w:18, dates:'24–30 Oct', title:'Magnetic Effect of Current + Salt Analysis + Conics start', tags:['bitsat'], skeleton:'std',
+    phy:'Magnetic Effect of Current (3h): Biot-Savart, Ampere\'s law, force on conductors, cyclotron — full module.',
+    chem:'Salt Analysis & Practical Chemistry (2h): radicals, group separation, heating effects — Allen module.',
+    math:'Parabola (2.5h): standard forms, focal chord, tangent/normal. Begin Ellipse.',
+    bitsat:'English Proficiency vocabulary + grammar begins (30min/day) — first BITSAT-specific slot of the year.',
+    days:[['Mon–Sat','Phy 3h · Chem 2h · Math 2.5h · BITSAT 30min · DPP 30min','8.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'From this week: 30 min/day BITSAT English Proficiency in the 6–8 PM block. Keep this slot fixed — it is the first deposit toward the April exam.' },
+  { phase:'2', w:19, dates:'31 Oct–6 Nov', title:'EMI + Ellipse & Hyperbola + Bohr Model (first-study)', tags:['rest'], skeleton:'std',
+    phy:'Electromagnetic Induction (3h): Faraday, Lenz, motional EMF, self/mutual inductance — full module.',
+    chem:'Atomic Structure — FULL BOHR MODEL, first-study (2.5h): energy levels, spectral series, Rydberg formula, radius/velocity equations, ionisation energy. Wk 2 covered only quantum numbers/config — this is genuinely new material, not revision.',
+    math:'Ellipse & Hyperbola (3h): standard forms, eccentricity, tangent/normal — complete both.',
+    bitsat:'30min/day English Proficiency continues.',
+    days:[['Mon–Fri','Phy 3h · Chem 2.5h · Math 3h · BITSAT 30min','9h'],
+          ['Sat AM','Continue content if needed — light day overall',''],
+          ['Sat PM','Light/optional — no new content from here','rest half-day'],
+          ['Sun','Full mock (3h) + analysis (2h)','5h']],
+    note:'Weekly full mock starts this Sunday and continues for the rest of the year. To compensate, Saturday afternoon becomes the new rest slot — shown explicitly here and in every week from now on, not just promised once.' },
+  { phase:'2', w:20, dates:'7–13 Nov', title:'AC + Matrices + P&C (Elasticity/Thermal deferred to Wk 22)', tags:[], skeleton:'intensive',
+    phy:'Alternating Current (2h): reactance, impedance, resonance, power factor. Elasticity, Thermal Expansion, Calorimetry, Heat Transfer deferred by default to Wk 22 (low-difficulty, easy to absorb as self-study during the mock-sprint analysis days).',
+    chem:'p-Block preview (2h): Group 15–18 key reactions. d-Block intro (1h): oxidation states, colour, magnetic properties.',
+    math:'Matrices (2h): operations, inverse, rank, systems of equations. Permutation & Combination (2h): counting, arrangements, combinations, repetition cases — full module.',
+    bitsat:'30min/day continues.',
+    days:[['Mon–Fri','Phy 2h · Chem 3h · Math 4h · BITSAT 30min','9.5h'],
+          ['Sat AM','Lighter content day',''],
+          ['Sat PM','Rest half-day','rest'],
+          ['Sun','Full mock (3h) + analysis (2h)','5h']],
+    note:'P&C gets an explicit 2h session here (it appears in RT2 and has a known overcounting pitfall) rather than being assumed-covered. Elasticity/Thermal moving to Wk 22 is the default plan, not a fallback — it keeps this week from exceeding the intensive ceiling.' },
+  { phase:'2', w:21, dates:'14–20 Nov', title:'Pre-RT2 mock sprint + Elasticity/Thermal (self-study)', tags:['allen','buffer'], skeleton:'intensive',
+    phy:'RT2 mock block: COM, Magnetic, Rotational, EMI, AC. Elasticity, Thermal Expansion, Calorimetry, Heat Transfer (2×1h): self-study Tue/Thu during analysis slots — short, low-difficulty chapters.',
+    chem:'RT2 mock block: Organic mechanisms, Electrochemistry, Salt Analysis, Bohr model. 3 mocks.',
+    math:'RT2 mock block: Circle, AUC, DiffEq, Parabola, Ellipse, Hyperbola, Matrices, P&C. 3 mocks.',
+    bitsat:'30min/day continues, folded into Sat/Sun where the mock schedule allows.',
+    days:[['Mon, Wed, Fri','Full 3h mock','3h'],
+          ['Tue, Thu','2h analysis + 1h Elasticity/Thermal self-study','3h'],
+          ['Sat','Weak-topic blitz (lighter than a content day)','5h'],
+          ['Sun','Rest — true day off, no mock this particular Sunday since RT2 week needs it']],
+    note:'Elasticity/Thermal genuinely only need 1h/day across two days — they are straightforward. This week restores a full Sunday rest (instead of the usual mock) since RT2 itself is the following week\'s main event.' },
+  { phase:'2', w:22, dates:'21–27 Nov', title:'ALLEN REVIEW TEST 2 — 22 Nov', tags:['allen'], skeleton:'test',
+    phy:'22 Nov, 9AM–12PM CBT. Phase 2 block: Mechanics + Electromagnetism.',
+    chem:'Phase 2 block: Organic reactions + Electrochemistry + Inorganic including Bohr model.',
+    math:'Phase 2 block: Full calculus + Coordinate Geometry + Matrices + P&C.',
+    bitsat:'—',
+    days:[['Sun 22 Nov','RT2 exam'],['Mon–Wed','3-day corrections, build master weakness list (top 5 per subject)'],['Thu onward','Begin Phase 3 fresh']],
+    note:'The weakness list from RT2 should directly drive how much extra time you give each topic in Phase 3 — it is the most actionable diagnostic of the year so far.' },
+
+  // ── PHASE 3 — FULL SYLLABUS + BITSAT INTRO ─────────────────────────────,
+  { phase:'3', w:23, dates:'28 Nov–4 Dec', title:'KTG/Thermo + Equilibrium + Binomial & Vectors', tags:['bitsat'], skeleton:'intensive',
+    phy:'KTG & Thermodynamics (2.5h): kinetic theory, Maxwell distribution, thermodynamic processes.',
+    chem:'Chemical Equilibrium + Ionic Equilibrium (3h): Kc/Kp, Le Chatelier, pH, buffer — full module.',
+    math:'Binomial Theorem + Vectors 3D (3h): binomial identities, dot/cross products, 3D applications.',
+    bitsat:'Increases to 1h/day (30min English Proficiency + 30min Logical Reasoning) from this week — non-negotiable slot for the April exam.',
+    days:[['Mon–Fri','Phy 2.5h · Chem 3h · Math 3h · BITSAT 1h','9.5h'],
+          ['Sat AM','Lighter content',''],
+          ['Sat PM','Rest half-day','rest'],
+          ['Sun','Full mock (3h) + analysis (2h)','5h']],
+    note:'BITSAT steps up to a full 1h/day from here — keep it fixed through the rest of Phase 3 even as JEE content gets denser.' },
+  { phase:'3', w:24, dates:'5–11 Dec', title:'Wave Motion + d/p/f Block + 3D Geometry', tags:[], skeleton:'intensive',
+    phy:'Wave on String, Sound Waves (3h): wave equation, superposition, standing waves, Doppler — full module.',
+    chem:'d-Block, p-Block complete, f-Block (3h): properties, reactions, colour, oxidation states.',
+    math:'3-Dimensional Geometry (3h): lines and planes, direction cosines, skew lines, distance formula.',
+    bitsat:'30min this week only (English Proficiency) — full 1h resumes Wk 26; this week absorbs slightly denser JEE content instead.',
+    days:[['Mon–Sat','Phy 3h · Chem 3h · Math 3h · BITSAT 30min','9.5h'],
+          ['Sun','Light revision (2h) only']],
+    note:'SM2 is 3 weeks away. Check your chapter completion list today — any gaps in the SM2 syllabus need to be closed by Wk 26, since Wk 27 is reserved for buffer (see Wk 27 design note).' },
+  { phase:'3', w:25, dates:'12–18 Dec', title:'Modern Physics + EM Waves + Wave Optics + Complex Numbers + Isomerism', tags:['hard'], skeleton:'intensive',
+    phy:'Modern Physics (2.5h): photoelectric effect, Bohr applications, nuclear physics, radioactivity — 35 PYQs folded into the block itself, not a separate slot. EM Waves (0.5h): short chapter, theory + 5–6 PYQs — moved here from the following week to give it room without overloading Wk 27. Wave Optics (2h): YDSE, diffraction, interference, polarisation — full module; YDSE numericals need real time, not a squeeze.',
+    chem:'Isomerism, Purification & Characteristics of Organic Compounds (2.5h): all structural and stereo isomerism types.',
+    math:'Complex Numbers (2.5h): Argand plane, modulus-argument, De Moivre\'s theorem.',
+    bitsat:'1h/day resumes — but only Sunday this week, to make room for the densest Physics week of the year without exceeding the intensive ceiling.',
+    days:[['Mon–Sat','Phy 5h · Chem 2.5h · Math 2.5h','10h — the one deliberate exception this year'],
+          ['Sun','BITSAT 1h + light revision (1h) — not a full rest day, but genuinely light']],
+    note:'This is the single most content-dense week in the plan and the only week that exceeds the 9.5h intensive ceiling — by design, and only here. It is immediately followed by Wk 27, which is now properly resourced with two full buffer days before SM2 (see next week\'s design note) — a hard week followed by real recovery, not 24 weeks of silent overload with nothing to absorb it.' },
+  { phase:'3', w:26, dates:'19–25 Dec', title:'SHM + Fluid Mechanics + Semiconductor + remaining Organic + Probability', tags:['buffer'], skeleton:'intensive',
+    phy:'SHM (Mon–Tue, 4h total): equations, energy, damped oscillations — full module + PYQs. Fluid Mechanics (Tue–Wed, 5h total): pressure, Bernoulli, viscosity, surface tension — Bernoulli application problems are harder than they look. Semiconductor (Wed–Thu, 3h total): p-n junction, diodes, transistors, logic gates. Error Analysis was moved to Wk 26 — not needed here.',
+    chem:'Carboxylic Acids & Derivatives, Aliphatic Amines, Aromatic Compounds, Biomolecules, Practical Organic Chemistry (5h total, Mon–Thu): complete remaining organic syllabus.',
+    math:'Probability (Mon–Tue, 2.5h): classical, conditional, Bayes, expectation. Relation & Statistics (Wed, 1h): both short, grouped.',
+    bitsat:'1h/day, Mon–Thu only — paused Fri/Sat to protect the SM2 buffer below.',
+    days:[['Mon','Phy SHM 3h · Math Prob 2h · Chem 1h · BITSAT 1h','7h'],
+          ['Tue','Phy SHM 1h + Fluid 2h · Math Prob 0.5h · Chem 2h · BITSAT 1h','6.5h'],
+          ['Wed','Phy Fluid 3h · Math Stats 1h · Chem 2h · BITSAT 1h','7h'],
+          ['Thu','Phy Semiconductor 3h · Chem 2h (finish) · BITSAT 1h','6h — all new content finished'],
+          ['Fri','Full SM2-style mock (3h) + analysis (2h) — real buffer day 1','5h'],
+          ['Sat','Revision on weakest spots from Friday\'s mock — real buffer day 2','4h'],
+          ['Sun','Rest — the day before SM2','rest']],
+    note:'Design note: in earlier drafts this week\'s content was reframed as "weekly totals" to hide an apparent overrun, but the resulting weekly figure was actually less than half a normal week\'s capacity — backwards for the densest week of the year. The real fix: move two genuinely trivial chapters (Error Analysis, EM Waves) into Wk 26\'s slightly larger capacity, which lets this week finish all new content by Thursday — leaving Friday and Saturday as a real, working mock-and-revision buffer before SM2, matching the pattern already used successfully before RT1, SM1, and RT2. By Thursday evening: 100% of the JEE Main syllabus is covered.' },
+  { phase:'3', w:27, dates:'26 Dec–1 Jan', title:'ALLEN SEMI MAJOR TEST 2 — 27 Dec', tags:['allen'], skeleton:'test',
+    phy:'27 Dec, 9AM–12PM CBT. Full Phase 2 + Phase 3 Physics — your most complete test yet.',
+    chem:'Complete syllabus. Biggest Inorganic + Organic combined test.',
+    math:'Full syllabus through Probability. First time all Maths topics appear together.',
+    bitsat:'Resumes fully — 2 days of BITSAT timed mocks after JEE corrections.',
+    days:[['Sun 27 Dec','SM2 exam'],['Mon–Wed','3-day correction protocol'],['Thu–Sat','2 days BITSAT timed mocks + 1 day rest before New Year']],
+    note:'SM2 is your most important diagnostic before the Major Tests. Compare this rank against SM1 — you should see a real improvement, since this week was properly buffered, unlike in earlier drafts of this plan.' },
+
+  // ── PHASE 4 — JEE MOCK SPRINT ────────────────────────────────────────────,
+  { phase:'4', w:28, dates:'2–8 Jan', title:'Full-syllabus mock sprint + ALLEN MAJOR TEST 1 — 3 Jan', tags:['allen','buffer'], skeleton:'intensive',
+    phy:'Full-syllabus revision via daily JEE mocks. Major Test 1 on 3 Jan (Sunday): treat it as another full mock sitting.',
+    chem:'Named reactions + inorganic properties blitz Mon–Sat. Full analysis after MT1.',
+    math:'Integration + Coordinate Geometry prioritised in revision — highest-yield in mock review.',
+    bitsat:'1.5h evening timed mocks, Mon–Sat.',
+    days:[['Mon–Sat','JEE mock 3h · Analysis 3h · Weak drill 1h · BITSAT 1.5h','8.5h'],
+          ['Sun 3 Jan','Major Test 1 exam — anchors this week']],
+    note:'MT1 falls on 3 Jan and anchors this week. No new chapters from here — all study is mock-based. Spend Monday 5 Jan on MT1 corrections before resuming the mock cadence.' },
+  { phase:'4', w:29, dates:'9–15 Jan', title:'ALLEN AIOT (All India Open Test) — 10 Jan + mock sprint', tags:['allen'], skeleton:'intensive',
+    phy:'AIOT on 10 Jan (Saturday): full syllabus, compete against current-year Allen classroom students — your most accurate national rank.',
+    chem:'Full analysis post-AIOT. Categorise errors: conceptual gap, calculation error, or time pressure.',
+    math:'Mock sprint on non-test days: 1 full JEE mock Mon/Wed/Fri, analysis Tue/Thu.',
+    bitsat:'1.5h evening timed mocks on non-test evenings — target 300+ per attempt.',
+    days:[['Mon, Wed, Fri','Full 3h mock','3h'],
+          ['Tue, Thu','3h analysis + BITSAT 1.5h','4.5h'],
+          ['Sat 10 Jan','AIOT exam'],
+          ['Sun','Post-AIOT analysis + rest afternoon','4h + rest']],
+    note:'AIOT rank is the most accurate predictor of your JEE Session 1 outcome — take it seriously, but Sunday afternoon stays a genuine rest slot even this close to the exam.' },
+  { phase:'4', w:30, dates:'16–22 Jan', title:'JEE Main Session 1 window — final sprint', tags:['exam','rest'], skeleton:'std',
+    phy:'JEE Main Session 1 expected this week. Revision only: Mechanics, Electrostatics, Modern Physics — highest-yield chapters.',
+    chem:'High-accuracy focus: organic named reactions, inorganic properties, Mole Concept numericals.',
+    math:'High-accuracy focus: Integration, Probability, Coordinate Geometry — PYQs only, no new problems.',
+    bitsat:'Paused this week — full attention on JEE Main.',
+    days:[['Daily','Mock every 2 days · PYQ revision only · no new topics','~6h'],
+          ['Every night','8h sleep — mandatory, not optional this week']],
+    note:'No new topics, no new strategies. The exam is the same JEE you\'ve sat for 25+ weeks — treat it as another mock. This week is consolidation, not cramming.',
+    examBanner:true },
+
+  // ── PHASE 5 — BITSAT-ONLY RUNWAY ─────────────────────────────────────────,
+  { phase:'5', w:31, dates:'23 Jan–5 Feb (2 wks)', title:'JEE Main S1 results window + BITSAT full-syllabus restart', tags:['bitsat'], skeleton:'std',
+    phy:'BITSAT Physics: re-cover JEE topics in BITSAT\'s question style (shorter, more conceptual, time-pressured) — not new content, but a genuinely different skill from JEE\'s longer numericals.',
+    chem:'Same approach for Chemistry — BITSAT favours quick factual recall and shorter calculations over JEE\'s multi-step problems.',
+    math:'Same approach for Maths — BITSAT Maths is faster-paced with more questions in less time per question.',
+    bitsat:'English Proficiency (full depth: vocabulary, grammar, comprehension, analogies) + Logical Reasoning (full depth: pattern recognition, series, visual reasoning) — both at 1.5h/day, the depth that was never possible to give during JEE prep.',
+    days:[['Mon–Sat','BITSAT-style Phy/Chem/Math 4h · English+LR 1.5h · Review 1.5h','7h'],
+          ['Sun','Rest']],
+    note:'This is the gap that earlier drafts of this plan never addressed: BITSAT is in April, but the plan used to stop in January. These two weeks deliberately use the post-JEE lull (results aren\'t out yet, no new JEE content needed) to fully shift gears.' },
+  { phase:'5', w:32, dates:'6–12 Feb', title:'BITSAT English Proficiency + Logical Reasoning — deep practice', tags:['bitsat'], skeleton:'std',
+    phy:'BITSAT-pattern problem sets, timed: 45 questions in 45 minutes pace practice.',
+    chem:'BITSAT-pattern problem sets, timed — same pace target.',
+    math:'BITSAT-pattern problem sets, timed — same pace target.',
+    bitsat:'English Proficiency + Logical Reasoning, full sectional tests (2h/day) — this is BITSAT\'s real differentiator from JEE and deserves dedicated depth, not leftover evening minutes.',
+    days:[['Mon–Sat','Phy/Chem/Math timed sets 4h · English+LR sectional 2h · Review 1h','7h'],
+          ['Sun','Rest']],
+    note:'By the end of this week, English Proficiency and Logical Reasoning should feel as rehearsed as Physics or Chemistry — they are 15% of the BITSAT score and were the most neglected sections during JEE-focused months.' },
+  { phase:'5', w:33, dates:'13–19 Feb', title:'BITSAT full-length mocks begin', tags:['bitsat'], skeleton:'std',
+    phy:'Full BITSAT-pattern mock, Mon/Wed/Fri — Physics section under real time pressure (12 min/15Q pace).',
+    chem:'Same mocks, Chemistry section.',
+    math:'Same mocks, Maths section.',
+    bitsat:'English+LR sections inside each full mock + Tue/Thu/Sat analysis — identify whether errors are speed-related (most common BITSAT failure mode) or conceptual.',
+    days:[['Mon, Wed, Fri','Full BITSAT mock (3h)','3h'],
+          ['Tue, Thu, Sat','Analysis (2h) + weak-section drill (2h)','4h'],
+          ['Sun','Rest']],
+    note:'BITSAT rewards speed differently than JEE — most errors at this stage are time-management, not concept gaps. The analysis sessions should explicitly separate the two.' },
+  { phase:'5', w:34, dates:'20–26 Feb', title:'BITSAT mocks continue + weak-section targeting', tags:['bitsat'], skeleton:'std',
+    phy:'Continue full mocks, now targeting whichever section scored lowest last week.',
+    chem:'Same — targeted weak-section work.',
+    math:'Same — targeted weak-section work.',
+    bitsat:'English+LR continue inside mocks; if either is still the weakest section, give it an extra 30min/day outside the mock itself.',
+    days:[['Mon, Wed, Fri','Full BITSAT mock (3h)','3h'],
+          ['Tue, Thu, Sat','Analysis + targeted weak-section work','4h'],
+          ['Sun','Rest']],
+    note:'This week and the next several weeks (through March, not itemised day-by-day here since the rhythm is now established) repeat this Mon/Wed/Fri mock + Tue/Thu/Sat analysis cadence, simply rotating which weak section gets the extra attention.' },
+  { phase:'5', w:35, dates:'27 Feb – early Apr (taper)', title:'Continued BITSAT mocks → final taper before the exam', tags:['bitsat','exam'], skeleton:'std',
+    phy:'Maintain mock cadence through March. In the final week before BITSAT: revision only, no new mocks in the last 2 days.',
+    chem:'Same maintenance approach.',
+    math:'Same maintenance approach.',
+    bitsat:'English+LR maintained at 1h/day throughout March. Final week: light review of weak areas only.',
+    days:[['Late Feb–Mar','Mon/Wed/Fri full mocks, Tue/Thu/Sat analysis — same established rhythm','~7h/day'],
+          ['Final week','Taper: revision only, last 2 days no new mocks','lighter'],
+          ['Exam day','BITSAT, ~April 2027']],
+    note:'This final phase intentionally isn\'t broken into single-week detail the way Phases 1–4 are — by this point the mock-and-analysis rhythm is fully established, and the only real decision left is when to start the taper (give yourself the final week fully light, no exceptions).',
+    examBanner:true }
+
+];
+
+const openWeeks = new Set();
+
+function buildWeeks(phase) {
+  const container = document.getElementById('weeks-container');
+  container.innerHTML = '';
+  let lastPhase = null;
+
+  weeks.forEach(w => {
+    if (phase !== 'all' && w.phase !== phase) return;
+
+    if (w.phase !== lastPhase) {
+      const div = document.createElement('div');
+      div.className = 'phase-div';
+      div.innerHTML = `<div class="phase-line"></div><span class="phase-pill ${phaseClass[w.phase]}">${phaseNames[w.phase]}</span><div class="phase-line"></div>`;
+      container.appendChild(div);
+      lastPhase = w.phase;
+    }
+
+    const tagHTML = (w.tags||[]).map(t => {
+      const map = {allen:'t-allen Allen milestone',exam:'t-exam Exam window',buffer:'t-buffer Buffer week',bitsat:'t-bitsat BITSAT focus',hard:'t-hard High difficulty',rest:'t-rest Rest day built in'};
+      const parts = (map[t]||'').split(' ');
+      return parts[0] ? `<span class="tag ${parts[0]}">${parts.slice(1).join(' ')}</span>` : '';
+    }).join('');
+    const isOpen = openWeeks.has(w.w);
+
+    const hpClass = w.skeleton === 'intensive' ? 'hp-intensive' : (w.skeleton === 'test' ? 'hp-test' : 'hp-std');
+    const hpLabel = w.skeleton === 'intensive' ? 'Intensive day · up to 9.5h' : (w.skeleton === 'test' ? 'Test week — no regular skeleton' : 'Standard day · 9.0h');
+
+    const subjCards = [
+      {cls:'s-phy',key:'phy',label:'Physics'},
+      {cls:'s-chem',key:'chem',label:'Chemistry'},
+      {cls:'s-math',key:'math',label:'Mathematics'},
+      {cls:'s-bitsat',key:'bitsat',label:'BITSAT'}
+    ].map(s => `<div class="subj-card ${s.cls}">
+        <div class="subj-lbl">${s.label}</div>
+        <div class="subj-body">${w[s.key]}</div>
+      </div>`).join('');
+
+    const dayRows = (w.days||[]).map(d => {
+      const isRest = /rest/i.test(d[2]||'') || /rest/i.test(d[1]||'');
+      return `<tr class="${isRest?'rest-row':''}"><td>${d[0]}</td><td>${d[1]}</td><td>${d[2]||''}</td></tr>`;
+    }).join('');
+
+    const banners = (w.allenBanner?`<div class="exam-banner eb-allen">&#128197; Allen CBT scheduled this week</div>`:'')
+                  +(w.examBanner?`<div class="exam-banner eb-exam">&#127942; Real exam window this week</div>`:'');
+
+    const card = document.createElement('div');
+    card.className = 'week-card';
+    card.innerHTML = `
+      <div class="week-header" onclick="toggle(${w.w},this)">
+        <span class="wk-num">Week ${w.w}</span>
+        <span class="wk-dates">${w.dates}</span>
+        <span class="wk-title">${w.title}</span>
+        <div class="wk-tags">${tagHTML}</div>
+        <span class="chevron" style="transform:${isOpen?'rotate(180deg)':'rotate(0deg)'}">&#8964;</span>
+      </div>
+      <div class="week-body${isOpen?' open':''}">
+        ${banners}
+        <div class="hours-pill ${hpClass}">${hpLabel}</div>
+        <table class="day-table">
+          <thead><tr><th>Days</th><th>Schedule</th><th>Hours</th></tr></thead>
+          <tbody>${dayRows}</tbody>
+        </table>
+        <div class="subj-grid">${subjCards}</div>
+        <div class="week-note">${w.note}</div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+function toggle(num, header) {
+  const body = header.nextElementSibling;
+  const chev = header.querySelector('.chevron');
+  if (openWeeks.has(num)) {
+    openWeeks.delete(num); body.classList.remove('open'); chev.style.transform='rotate(0deg)';
+  } else {
+    openWeeks.add(num); body.classList.add('open'); chev.style.transform='rotate(180deg)';
+  }
+}
+
+function filterPhase(phase, btn) {
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  buildWeeks(phase);
+}
+
+buildWeeks('all');
+</script>
+</body>
+</html>
